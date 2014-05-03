@@ -1,5 +1,4 @@
-<?// include('../common/header.php'); ?>
-<? include('header.php'); ?>
+<? include('../common/header.php'); ?>
 
 <?= generateHeader() ?>
 

@@ -3,7 +3,6 @@
 <?= generateHeader() ?>
 
     <div style="text-align:center;">
-test
 
         <table align="center">
             <tr>
