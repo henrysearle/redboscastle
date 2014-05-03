@@ -1,0 +1,68 @@
+body, html {
+  height: 98%;
+  } 
+body {
+  font-family   : "Georgia";
+  background-color:#D3E4D3;
+  }
+
+.room {
+  width           : 47%;
+  margin-left     : 2%;
+  margin-bottom   : 20px;
+  float           : left;
+}
+
+.room_details {
+  float           : left;
+  width           : 125px;
+  text-align      : center;
+}
+
+.centered {
+  text-align  : center;
+  margin-left : 5%; 
+  width       : 90%;
+}
+
+.calendar-month {
+  display         : none;
+}
+
+.daynames {
+  text-align      : center;
+  font-size       : 12px;
+}
+
+.booked, .date_gone, .free {
+  color           : black;
+  font-size       : 11px;
+  width           : 27px;
+  height          : 20px;  
+  text-align      : center;  
+}
+
+.booked {
+  background-color: #FF0000;
+}
+
+.date_gone {
+  background-color: #00FF00;
+}
+
+.free {
+  background-color: #CCCCCC;
+}
+
+.roomname {
+  font-size       : 18px;
+  text-transform  : capitalize;
+}
+
+a:link, a:hover, a:active, a:visited {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    color: #000000;
+}
