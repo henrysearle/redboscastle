@@ -2,36 +2,97 @@
 
 <?= generateHeader() ?>
 
-    <div style="text-align:center;">
+<?
 
-        <table align="center">
-            <tr>
-                <td>
-                    <a href="http://barn.redboscastle.com"><img width="200" src="/images/barn/barn.jpg" /></a>
-                </td>
-                <td>
-                    <h2 style="text-align: left">
-                        <a href="http://barn.redboscastle.com" style="text-decoration: none">Reddivallen Barn</a>
-                    </h2>
-                    Find more accommodation in <a href="http://barn.redboscastle.com">Reddivallen Barn</a>
-                </td>
-            </tr>
-        </table>
+$slideShowImages = array(
+    (object) array(
+        'src' => 'images/main/farmhouse.jpg',
+    ),
+    (object) array(
+        'src' => 'images/farmhouse/entrace.jpg',
+    ),
+    (object) array(
+        'src' => 'images/main/farm.jpg',
+    ),
+    (object) array(
+        'src' => 'images/main/sunset.jpg',
+    ),
+    (object) array(
+        'src' => 'images/farmhouse/farmhouse.jpg',
+    ),
+    (object) array(
+        'src' => 'images/farmhouse/monks_room.jpg',
+    ),
+    (object) array(
+        'src' => 'images/farmhouse/stairs.jpg',
+    ),
+    (object) array(
+        'src' => 'images/farmhouse/reddivallen_suite.jpg',
+    ),
+    (object) array(
+        'src' => 'images/farmhouse/farmhousemain.jpg',
+    ),
+);
+
+?>
+
+    <div class="text-center">
+
+        <div class="cross-sell row">
+            <div class="col-xs-4">
+                <a href="http://barn.redboscastle.com"><img class="full-width" src="/images/barn/barn.jpg" /></a>
+            </div>
+            <div class="col-xs-8 text-left">
+                <h5>
+                    <a href="http://barn.redboscastle.com">Reddivallen Barn</a>
+                </h5>
+                Find more accommodation at <a href="http://barn.redboscastle.com">Reddivallen Barn</a>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
 
         <hr />
 
         <p>Quality Bed and Breakfast In Boscastle, Cornwall</p>
 
-        <p><span style="font-weight : bold;">SPECIAL OFFER</span><br/>
+        <p><span style="font-weight : bold;">SPECIAL OFFER</span><br />
             Throughout the months of February, March, April and October <br />(with the exception of Easter and
             Bank Holidays)<br /> <strong>Stay 2 nights or more and stay an extra night for free</strong>
         </p>
 
         <p>Open from February to October</p>
 
-        <p><img src="/images/wifilogo.png" style="position: relative; top: 6px;"/> Free WiFi in all rooms</p>
+        <p><img src="/images/wifilogo.png" style="position: relative; top: 6px;" /> Free WiFi in all rooms</p>
 
-        <img src="images/main/farmhouse.jpg" name='SlideShow' alt="" />
+        <? if (isset($slideShowImages)) { ?>
+            <div id="carousel-index" class="carousel slide fixed-height" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <? foreach ($slideShowImages as $i => $image) { ?>
+                        <li data-target="#carousel-index" data-slide-to="<?= $i ?>" class="<?= $i == 0 ? 'active' : '' ?>"></li>
+                    <? } ?>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <? foreach ($slideShowImages as $i => $image) { ?>
+                        <div class="item <?= $i == 0 ? 'active' : '' ?> text-center">
+                            <img class="center " src="<?= $image->src ?>">
+                        </div>
+                    <? } ?>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-index" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-index" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        <? } ?>
 
         <p>
             Reddivallen is tucked away in a secluded location offering the
@@ -54,81 +115,5 @@
             Walkers and cyclists are welcome
         </p>
     </div>
-
-
-    <script type="text/javascript">
-
-        function changeSrc(imagename) {
-            document.getElementById("Main_Image").src = imagename;
-        }
-
-
-        // (C) 2000 www.CodeLifter.com
-        // http://www.codelifter.com
-        // Free for all users, but leave in this  header
-        // NS4-6,IE4-6
-        // Fade effect only in IE; degrades gracefully
-
-        // =======================================
-        // set the following variables
-        // =======================================
-
-
-        // Set slideShowSpeed (milliseconds)
-        var slideShowSpeed = 2000;
-
-        // Duration of crossfade (seconds)
-        var crossFadeDuration = 1;
-
-        // Specify the image files
-        var Pic = new Array(); // don't touch this
-
-        // to add more images, just continue
-        // the pattern, adding to the array below
-
-        Pic[0] = 'images/main/farmhouse.jpg';
-        Pic[1] = 'images/farmhouse/entrace.jpg';
-        Pic[2] = 'images/main/farm.jpg';
-        Pic[3] = 'images/main/sunset.jpg';
-        Pic[4] = 'images/farmhouse/farmhouse.jpg';
-        Pic[5] = 'images/farmhouse/monks_room.jpg';
-        Pic[6] = 'images/farmhouse/stairs.jpg';
-        Pic[7] = 'images/farmhouse/reddivallen_suite.jpg';
-        Pic[8] = 'images/farmhouse/farmhousemain.jpg';
-
-        // =======================================
-        // do not edit anything below this line
-        // =======================================
-
-        var t;
-        var j = 0;
-        var p = Pic.length;
-
-        var preLoad = new Array();
-        for (i = 0; i < p; i++) {
-            preLoad[i] = new Image();
-            preLoad[i].src = Pic[i]
-        }
-
-        function runSlideShow() {
-            if (document.all) {
-                document.images.SlideShow.style.filter = "blendTrans(duration=2)";
-                document.images.SlideShow.style.filter = "blendTrans(duration=crossFadeDuration)";
-                document.images.SlideShow.filters.blendTrans.Apply()
-            }
-
-            document.images.SlideShow.src = preLoad[j].src;
-            if (document.all) {
-                document.images.SlideShow.filters.blendTrans.Play()
-            }
-
-            j = j + 1;
-            if (j > (p - 1)) j = 0;
-            t = setTimeout('runSlideShow()', slideShowSpeed)
-        }
-
-        runSlideShow();
-
-    </script>
 
 <?= generateFooter() ?>

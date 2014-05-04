@@ -1,42 +1,5 @@
-body, html {
-  height: 98%;
-  } 
-body {
-  font-family   : "Georgia";
-  background-color:#D3E4D3;
-  }
-
-h2 {
-  margin-top    : 0px;
-  margin-bottom :5px;
-  font-weight   : 500;
-}
-
-table {
-	border:0px;
-	padding:0px;
-	border-spacing:0px;
-}
-
-h4 {
-	border:0px;
-	padding:0px;
-	margin-bottom:0px;
-	margin-top:0px;
-	text-align:center;
-}
-
-hr {
-	margin-top:5px;
-	margin-bottom:2px;
-}
-
 .background-color {
     background: #ECE3DE;
-}
-
-.main_page {
-  background-color:#F9F3E3;
 }
 
 .main_page .containing-table td {

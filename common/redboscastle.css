@@ -1,0 +1,150 @@
+@media (min-width: 768px) {
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+    .sidebar-nav .navbar ul {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li {
+        float: none;
+        display: block;
+    }
+    .sidebar-nav .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+.sidebar-nav li.active a {
+    font-size: 17px;
+}
+
+.full-width {
+    width: 100%;
+}
+.full-height {
+    height: 100%;
+}
+
+.row.same-column-height{
+    overflow: hidden;
+}
+
+.row.same-column-height > div[class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.hang-left {
+    margin-left: -15px;
+    margin-right: 15px;
+}
+
+.rounded-bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+body {
+    background-color: #F9F3E3;
+    padding-bottom: 20px;
+    color: #000;
+}
+
+.carousel-inner .item .center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel.fixed-height {
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.carousel-inner>.item>img {
+    margin: 0 auto;
+    height: 300px;
+    max-width: none;
+}
+
+.header {
+    font-family: Georgia,Lato,sans-serif;
+    margin-top: 20px;
+}
+
+.header .background-color {
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+a.color-midnight-blue,
+a.color-midnight-blue:hover,
+a.color-midnight-blue:active,
+a.color-midnight-blue:visited,
+.color-midnight-blue {
+    color: #2C3E50;
+}
+
+a.color-black,
+a.color-black:hover,
+a.color-black:active,
+a.color-black:visited,
+.color-black {
+    color: #000;
+}
+
+.header .image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.header .phone {
+    font-size: 45px;
+    line-height: 55px;
+    margin-top: 10px;
+}
+
+.header .email {
+    font-size: 25px;
+}
+
+/* Medium Header */
+@media (max-width: 1200px) {
+    .header .logo img {
+        width: 450px;
+    }
+
+    .header .phone {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .header .rating {
+        width: 68px;
+    }
+}
+
+/* Small Header */
+@media (max-width: 992px) {
+    .header .logo img {
+        width: 370px;
+    }
+
+    .header .phone {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .header .email {
+        font-size: 20px;
+    }
+
+    .header .rating {
+        width: 50px;
+    }
+}

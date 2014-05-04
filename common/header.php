@@ -6,7 +6,14 @@ function getSiteName() {
     return $folders[5];
 }
 
+function getCurrentPage() {
+    return $_SERVER['SCRIPT_NAME'];
+}
+
+include_once($_SERVER['DOCUMENT_ROOT'] . '/header.php');
+
 function generateHeader() {
+    $links = getLinks();
     ob_start(); ?>
 
     <html>
@@ -17,37 +24,65 @@ function generateHeader() {
         <title>Reddivallen, Quality Bed and Breakfast in Boscastle, Cornwall</title>
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://www.henrysearle.com/common/static/flat-ui/css/flat-ui.css" rel="stylesheet">
+        <link href="/static/common.css" rel="stylesheet">
         <link href="/redboscastle.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
     <div class="header">
         <div class="container background-color">
-            <img src="/images/graphics/title image copy.jpg" width="925" height="300" />
+            <div class="row">
+                <div class="hidden-xs image col-xs-5">
+                    <img class="full-width" src="/images/nav-image.jpg">
+                </div>
+                <div class="col-sm-7 color-black">
+                    <div class="logo">
+                        <img src="/images/logo.png">
+                    </div>
+                    <div class="pull-right">
+                        <img class="rating" src="/images/ratings/gold.png">
+                        <img class="rating" src="/images/ratings/5star.png">
+                    </div>
+                    <div class="phone">01840 250854</div>
+                    <div class="email">
+                        <a class="color-black" href="mailto:enquiries@reddivallenfarm.com">
+                            enquiries@reddivallenfarm.com
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container">
-    <div class="row">
+    <div class="container nav-page-content">
+        <div class="row same-column-height">
+            <div class="col-sm-4 col-md-3 background-color hang-left rounded-bottom">
+                <div class="sidebar-nav">
+                    <div class="navbar" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <span class="visible-xs navbar-brand">Sidebar menu</span>
+                        </div>
+                        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <? foreach ($links as $link) { ?>
+                                    <li class="<?= getCurrentPage() == $link->href ? 'active' : '' ?>">
+                                        <a href="<?= $link->href ?>"><?= $link->text ?></a>
+                                    </li>
+                                <? } ?>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
 
-    <div class="col-sm-4 background-color">
-        <div class="style2">
-            <p><a href="/index.php">Home</a></p>
-            <p><a href="/rooms.php">Rooms and Tariff</a></p>
-            <p><a href="/availability.php">Availability</a></p>
-            <p><a href="/enquiry.php">Enquiry Form</a></p>
-            <p><a href="/farm.php">The Farm</a></p>
-            <p><a href="/lake.php">The Lake</a></p>
-            <p><a href="/walkers.php">Walkers and Cyclists</a></p>
-            <p><a href="/surround.php">Surrounding Area</a></p>
-            <p><a href="/all.php">Room Facilities </a></p>
-            <p><a href="/self.php">Self Catering</a></p>
-            <p><a href="/location.php">How to find us </a></p>
-            <p><a href="/access_statement.php">Access Statement</a></p>
-            <p><a href="/terms.php">Booking Terms</a></p>
-            <p><a href="/contact.php">Contact Details</a></p>
-        </div>
-    </div>
-    <div class="col-sm-8 background-color">
+            <div class="col-sm-8 col-md-9 background-color rounded-bottom">
+
 
     <?
     return ob_get_clean();
@@ -56,20 +91,9 @@ function generateHeader() {
 
 function generateFooter() {
     ob_start(); ?>
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    <table width="925" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-            <td width="75"><img src="/images/graphics/corner 4.png" width="75" height="75" /></td>
-            <td width="45" class="background-color">&nbsp;</td>
-            <td width="75"><img src="/images/graphics/corner 3.png" width="75" height="75" /></td>
-            <td width="10">&nbsp;</td>
-            <td width="75"><img src="/images/graphics/corner 4.png" width="75" height="75" /></td>
-            <td width="570" class="background-color">&nbsp;</td>
-            <td width="75"><img src="/images/graphics/corner 3.png" width="75" height="75" /></td>
-        </tr>
-    </table>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
