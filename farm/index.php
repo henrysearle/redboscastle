@@ -38,22 +38,20 @@ $slideShowImages = array(
 
     <div class="text-center">
 
-        <div class="cross-sell row">
-            <div class="col-xs-4">
+        <div class="cross-sell row hidden-xs">
+            <div class="col-sm-4">
                 <a href="http://barn.redboscastle.com"><img class="full-width" src="/images/barn/barn.jpg" /></a>
             </div>
-            <div class="col-xs-8 text-left">
+            <div class="col-sm-8 text-left">
                 <h5>
                     <a href="http://barn.redboscastle.com">Reddivallen Barn</a>
                 </h5>
                 Find more accommodation at <a href="http://barn.redboscastle.com">Reddivallen Barn</a>
             </div>
+            <div class="clearfix"></div>
+            <hr />
         </div>
 
-        <div class="clearfix"></div>
-
-
-        <hr />
 
         <p>Quality Bed and Breakfast In Boscastle, Cornwall</p>
 
@@ -66,33 +64,7 @@ $slideShowImages = array(
 
         <p><img src="/images/wifilogo.png" style="position: relative; top: 6px;" /> Free WiFi in all rooms</p>
 
-        <? if (isset($slideShowImages)) { ?>
-            <div id="carousel-index" class="carousel slide fixed-height" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <? foreach ($slideShowImages as $i => $image) { ?>
-                        <li data-target="#carousel-index" data-slide-to="<?= $i ?>" class="<?= $i == 0 ? 'active' : '' ?>"></li>
-                    <? } ?>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <? foreach ($slideShowImages as $i => $image) { ?>
-                        <div class="item <?= $i == 0 ? 'active' : '' ?> text-center">
-                            <img class="center " src="<?= $image->src ?>">
-                        </div>
-                    <? } ?>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-index" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#carousel-index" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-        <? } ?>
+        <?= generateSlideshow($slideShowImages) ?>
 
         <p>
             Reddivallen is tucked away in a secluded location offering the

@@ -15,10 +15,30 @@
         padding-top: 12px;
         padding-bottom: 12px;
     }
+
+}
+
+@media (max-width: 767px) {
+    .sidebar.hang-left {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .sidebar {
+        margin-top: 30px;
+    }
 }
 
 .sidebar-nav li.active a {
     font-size: 17px;
+}
+
+.sidebar-nav .navbar-brand {
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.sidebar-navbar-collapse {
+    max-height: none;
 }
 
 .full-width {
@@ -28,13 +48,15 @@
     height: 100%;
 }
 
-.row.same-column-height{
-    overflow: hidden;
-}
+@media (min-width: 768px) {
+    .row.same-column-height{
+        overflow: hidden;
+    }
 
-.row.same-column-height > div[class*="col-"]{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
+    .row.same-column-height > div[class*="col-"]{
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+    }
 }
 
 .hang-left {
@@ -47,10 +69,38 @@
     border-bottom-right-radius: 10px;
 }
 
+@media (max-width: 767px) {
+    .rounded-top-xs {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .rounded-bottom-xs {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+.pad-right {
+    padding-right: 10px;
+}
+
+.pad-left {
+    padding-left: 10px;
+}
+
+.pad-top {
+    padding-top: 10px;
+}
+
 body {
     background-color: #F9F3E3;
-    padding-bottom: 20px;
     color: #000;
+    padding: 15px;
+}
+
+h2.page-top,
+h3.page-top {
+    margin-top: 0px;
 }
 
 .carousel-inner .item .center {
@@ -59,21 +109,46 @@ body {
 }
 
 .carousel.fixed-height {
-    height: 300px;
-    width: 400px;
     overflow: hidden;
     margin: 10px auto;
 }
 
+.carousel.fixed-height-medium {
+    height: 300px;
+    width: 400px;
+}
+.carousel.fixed-height-large {
+    height: 375px;
+    width: 500px;
+}
+
 .carousel-inner>.item>img {
     margin: 0 auto;
-    height: 300px;
     max-width: none;
+}
+
+.fixed-height-medium .carousel-inner>.item>img {
+    height: 300px;
+}
+
+.fixed-height-large .carousel-inner>.item>img {
+    height: 375px;
+}
+
+
+@media (max-width: 767px) {
+    .carousel.fixed-height {
+        height: 195px;
+        width: 260px;
+    }
+
+    .fixed-height .carousel-inner>.item>img {
+        height: 195px;
+    }
 }
 
 .header {
     font-family: Georgia,Lato,sans-serif;
-    margin-top: 20px;
 }
 
 .header .background-color {
@@ -113,7 +188,7 @@ a.color-black:visited,
     font-size: 25px;
 }
 
-/* Medium Header */
+/* MD Header */
 @media (max-width: 1200px) {
     .header .logo img {
         width: 450px;
@@ -129,7 +204,7 @@ a.color-black:visited,
     }
 }
 
-/* Small Header */
+/* SM Header */
 @media (max-width: 992px) {
     .header .logo img {
         width: 370px;
@@ -146,5 +221,44 @@ a.color-black:visited,
 
     .header .rating {
         width: 50px;
+    }
+}
+
+
+/* XS Header */
+@media (max-width: 768px) {
+    .header .logo img {
+        width: 250px;
+    }
+
+    .header .phone {
+        font-size: 20px;
+        line-height: 55px;
+    }
+
+    .header .email {
+        font-size: 16px;
+    }
+
+    .header .rating {
+        width: 50px;
+    }
+}
+
+/* responsive iFrames. I hate myself */
+#room_frame {
+    width: 290px!important;
+}
+/* MD  */
+@media (max-width: 1200px) {
+    #room_frame {
+        width: 230px!important;
+    }
+}
+
+/* SM  */
+@media (max-width: 992px) {
+    #room_frame {
+        width: 260px!important;
     }
 }

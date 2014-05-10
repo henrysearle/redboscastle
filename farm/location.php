@@ -2,7 +2,7 @@
 
 <?= generateHeader() ?>
 
-<h2>Getting to Reddivallen by car:</h2>
+<h3>Getting to Reddivallen by car:</h3>
 <p>
     Reddivallen is approximately 75 minutes drive from Exeter.<br />
     From Exeter on the A30 to Launceston take the A395/A39 to Camelford. <br />
@@ -11,7 +11,7 @@
     Reddivallen is sign-posted on the left. The entrance has cornish stone walling with a slate sign and Reddivallen is
     down the tarmac lane.
 </p>
-<h2>Alternatively:</h2>
+<h3>Alternatively:</h3>
 Reddivallen is -
 <ul>
     <li>90 minutes drive from Exeter Railway Station or Airport;</li>
@@ -19,39 +19,103 @@ Reddivallen is -
     <li>45 minutes from Newquay Airport &ndash; Car Hires available</li>
 </ul>
 
-There is also a Western Greyhound bus route between Bude and  Wadebridge with links via Camelford to Exeter. <br />
+There is also a Western Greyhound bus route between Bude and Wadebridge with links via Camelford to Exeter. <br />
 <br />
-<table width="600" border="0">
-    <tr>
-        <td><a href="http://www.nationalrail.co.uk" target="_blank">National Rail enquiries:</a></td>
-        <td>08457 484 950</td>
-    </tr>
-    <tr>
-        <td><a href="http://www.firstgroup.com/ukbus/southwest/devon/home/index.php" target="_blank">First Western
-                National General:</a></td>
-        <td>01209 719 988</td>
-    </tr>
-    <tr>
-        <td><a href="http://www.westerngreyhound.com/" target="_blank">Western Greyhound:</a></td>
-        <td>01637 871 871</td>
-    </tr>
-    <tr>
-        <td><a href="http://www.nationalexpress.com/" target="_blank">National Express: </a></td>
-        <td>0870 580 8080</td>
-    </tr>
-    <tr>
-        <td>Bus Line Cornwall:</td>
-        <td>0845 600 1420</td>
-    </tr>
-    <tr>
-        <td>Camelot Taxis:</td>
-        <td>01840 770172 or 07968 822019</td>
-    </tr>
-    <tr>
-        <td>Valency Taxis:</td>
-        <td> 01840 211722 or 07974 835084</td>
-    </tr>
-</table>
+
+<div>
+    <h5>
+        Trains
+    </h5>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            <a href="http://www.nationalrail.co.uk" target="_blank">
+                National Rail enquiries:
+            </a>
+        </div>
+        <div class="col-sm-4 col-md-6">
+            08457 484 950
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            <a href="http://www.firstgroup.com/ukbus/southwest/devon/home/index.php" target="_blank">
+                First Western National General:
+            </a>
+        </div>
+        <div class="col-sm-4 col-md-6">
+            01209 719 988
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <h5>
+        Buses
+    </h5>
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            <a href="http://www.westerngreyhound.com/" target="_blank">
+                Western Greyhound:
+            </a>
+        </div>
+        <div class="col-sm-4 col-md-6">
+            01637 871 871
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            <a href="http://www.nationalexpress.com/" target="_blank">
+                National Express:
+            </a>
+        </div>
+        <div class="col-sm-4 col-md-6">
+            0870 580 8080
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            Bus Line Cornwall:
+        </div>
+        <div class="col-sm-4 col-md-6">
+            0845 600 1420
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+
+    <h5>
+        Taxis
+    </h5>
+    <p>
+        We can book taxis for you or alternatively,
+        you can arrange your taxis from these companies
+    </p>
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            Camelot Taxis:
+        </div>
+        <div class="col-sm-4 col-md-6">
+            01840 770172 or 07968 822019
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            Valency Taxis:
+        </div>
+        <div class="col-sm-4 col-md-6">
+            01840 211722 or 07974 835084
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
 
 <?= generateFooter() ?>
 

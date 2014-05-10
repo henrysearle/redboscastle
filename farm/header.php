@@ -7,52 +7,52 @@ function getLinks() {
             'text' => 'Home'
         ),
         (object) array(
-            'href' => '/rooms.php',
+            'href' => '/rooms.php#content',
             'text' => 'Rooms and Tariff'
         ),
         (object) array(
-            'href' => '/availability.php',
+            'href' => '/availability.php#content',
             'text' => 'Availability'
         ),
         (object) array(
-            'href' => '/enquiry.php',
-            'text' => 'Enquiries'
+            'href' => '/enquiry.php#content',
+            'text' => 'Enquiries and Contact'
         ),
         (object) array(
-            'href' => '/farm.php',
+            'href' => '/all.php#content',
+            'text' => 'Room Facilities'
+        ),
+        (object) array(
+            'href' => '/farm.php#content',
             'text' => 'The Farm'
         ),
         (object) array(
-            'href' => '/lake.php',
+            'href' => '/lake.php#content',
             'text' => 'The Lake'
         ),
         (object) array(
-            'href' => '/walkers.php',
+            'href' => '/walkers.php#content',
             'text' => 'Walkers and Cyclists'
         ),
         (object) array(
-            'href' => '/surround.php',
+            'href' => '/surround.php#content',
             'text' => 'Surrounding Area'
         ),
         (object) array(
-            'href' => '/self.php',
+            'href' => '/self.php#content',
             'text' => 'Self Catering'
         ),
         (object) array(
-            'href' => '/location.php',
+            'href' => '/location.php#content',
             'text' => 'How to find us'
         ),
         (object) array(
-            'href' => '/access_statement.php',
+            'href' => '/access_statement.php#content',
             'text' => 'Access Statement'
         ),
         (object) array(
-            'href' => '/terms.php',
+            'href' => '/terms.php#content',
             'text' => 'Booking Terms'
-        ),
-        (object) array(
-            'href' => '/contact.php',
-            'text' => 'Contact Details'
-        ),
+        )
     );
 }

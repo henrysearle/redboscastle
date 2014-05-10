@@ -1,4 +1,4 @@
-<? include_once($_SERVER['DOCUMENT_ROOT'] . 'header.php'); ?>
+<? include_once('header.php'); ?>
 
 <?= generateHeader() ?>
 
